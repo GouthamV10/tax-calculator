@@ -1,0 +1,156 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tax Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Tax Calculator</h1>
+    <!-- Calculator box -->
+    <div class="container">
+      <form id="tax">
+        <!--Annual income field-->
+        <div class="label">
+          <div class="text-label">
+            <label>Enter your gross annual income</label>
+            <div>
+              <p id="hint1" class="message">
+                Gross salary is your total salary before any deductions
+              </p>
+              <span class="hint" onmouseenter="showMessage(event,'hint1')"
+                >?</span
+              >
+            </div>
+          </div>
+
+          <div class="field">
+            <input
+              id="annual-income"
+              type="text"
+              placeholder="Enter your gross annual income"
+              autocomplete="off"
+            />
+            <div>
+              <p id="error1" class="error-message">Please enter numbers only</p>
+              <span
+                id="errorm1"
+                class="error"
+                onmouseenter="showErrorMessage(event,'error1')"
+                >!</span
+              >
+            </div>
+          </div>
+        </div>
+        <!--Extra income field-->
+        <div class="label">
+          <div class="text-label">
+            <label>Enter extra income</label>
+            <div>
+              <p id="hint2" class="message">
+                Additional earnings beyond salary, including investments and
+                side jobs
+              </p>
+              <span class="hint" onmouseenter="showMessage(event,'hint2')"
+                >?</span
+              >
+            </div>
+          </div>
+          <div class="field">
+            <input
+              id="extra-income"
+              type="text"
+              placeholder="Enter extra income from other sources"
+              autocomplete="off"
+            />
+            <div>
+              <p id="error2" class="error-message">Please enter numbers only</p>
+              <span
+                id="errorm2"
+                class="error"
+                onmouseenter="showErrorMessage(event,'error2')"
+                >!</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <!--Age Group field-->
+        <div class="label">
+          <div class="text-label">
+            <label>Enter your age</label>
+            <div>
+              <p id="hint3" class="message">
+                Enter the age group you belong to
+              </p>
+              <span class="hint" onmouseenter="showMessage(event,'hint3')"
+                >?</span
+              >
+            </div>
+          </div>
+          <div class="field">
+            <select id="age">
+              <option value="none">Select Age Group</option>
+              <option value="40">&lt;40</option>
+              <option value="40-60">&lt;60 & &ge;40</option>
+              <option value="60">&ge;60</option>
+            </select>
+            <div>
+              <p id="error3" class="error-message">Input field is mandatory</p>
+            </div>
+          </div>
+        </div>
+
+        <!--Deductions field-->
+        <div class="label">
+          <div class="text-label">
+            <label>Enter total applicable deductions</label>
+            <div>
+              <p id="hint4" class="message">
+                Expenses or allowances subtracted from income to reduce taxable
+                amount
+              </p>
+              <span class="hint" onmouseenter="showMessage(event,'hint4')"
+                >?</span
+              >
+            </div>
+          </div>
+          <div class="field">
+            <input
+              id="deductions"
+              type="text"
+              placeholder="Add total applicable deductions"
+              autocomplete="off"
+            />
+            <div>
+              <p id="error4" class="error-message">Please enter numbers only</p>
+              <span
+                id="errorm4"
+                class="error"
+                onmouseenter="showErrorMessage(event,'error4')"
+                >!</span
+              >
+            </div>
+          </div>
+        </div>
+        <button class="btn" type="submit" value="Submit">Submit</button>
+      </form>
+    </div>
+
+    <!--output container-->
+    <div class="output-container">
+      <p class="text1">Your overall income will be</p>
+      <p id="ans" class="text2">0</p>
+      <p class="text3">after tax deductions</p>
+      <button class="close-btn" type="submit" value="Close">Close</button>
+      <div class="variables">
+        <p>Annual Income: <span id="v-ai"></span></p>
+        <p>Extra Income: <span id="v-ei"></span></p>
+        <p>Deductions: <span id="v-d"></span></p>
+        <p>Age Group: <span id="v-ag"></span></p>
+        <p>Tax: <span id="v-t"></span></p>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

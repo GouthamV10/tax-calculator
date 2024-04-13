@@ -1,0 +1,234 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/*header*/
+h1 {
+  margin-top: 50px;
+  color: blueviolet;
+}
+
+/*input fields*/
+input,
+select {
+  border: none;
+}
+
+/*tax-container*/
+.container {
+  border: 0.5px solid grey;
+  padding: 50px 30px;
+  margin: 30px auto;
+  border-radius: 2px;
+  position: relative;
+}
+
+/*label*/
+.label {
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.text-label {
+  margin-bottom: 5px;
+}
+
+.hint {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid grey;
+  color: grey;
+  border-radius: 50%;
+  font-weight: 700;
+  padding: 1.5px;
+  font-size: 8px;
+  text-align: center;
+  margin-left: 5px;
+}
+
+.text-label {
+  display: flex;
+  align-items: center;
+}
+
+/*input-fields*/
+.field {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+  border: 0.5px solid grey;
+  border-radius: 2px;
+  width: 400px;
+}
+
+.field input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 30px;
+  padding: 15px 7.5px;
+}
+
+.field input:focus {
+  outline: none;
+}
+
+#age {
+  width: 100%;
+  box-sizing: border-box;
+  height: 30px;
+  padding: 5px 5px;
+  font-size: 14px;
+  color: black;
+  background-color: #fff;
+}
+
+#age:focus {
+  outline: none;
+}
+.field span {
+  margin-left: 10px;
+}
+
+.error {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border: 1px solid red;
+  color: red;
+  border-radius: 50%;
+  font-weight: 700;
+  padding: 1.5px;
+  font-size: 8px;
+  text-align: center;
+  margin: 0 5px;
+  visibility: hidden;
+}
+
+.error-toggle {
+  visibility: visible;
+}
+
+/*button*/
+.btn {
+  width: 400px;
+  padding: 7.5px 10px;
+  margin-top: 35px;
+  color: white;
+  background-color: blueviolet;
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+}
+
+/*output container*/
+.output-container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5px solid grey;
+  border-radius: 2px;
+  padding: 50px 75px;
+  background-color: white;
+  z-index: 2;
+  margin-top: 75px;
+  visibility: hidden;
+}
+
+.output-container p {
+  margin: 0;
+  padding: 5px;
+}
+
+.output-container-toggle {
+  visibility: visible;
+}
+
+.text1 {
+  font-size: 28px;
+}
+
+.text2 {
+  font-size: 22px;
+}
+.text3 {
+  font-size: 16px;
+}
+
+.close-btn {
+  margin-top: 40px;
+  background-color: blueviolet;
+  color: white;
+  border-radius: 2px;
+  border: none;
+  font-size: 15px;
+  padding: 7.5px 12px;
+}
+
+/*hint messages*/
+.message {
+  position: fixed;
+  width: 60px;
+  font-size: 8px;
+  background-color: grey;
+  border: 1px solid #ccc;
+  padding: 10px 5px;
+  border-radius: 2px;
+  z-index: 5;
+  color: white;
+  display: none;
+  transform: translateY(-120%) translateX(-20%);
+}
+
+.message-toggle {
+  display: block;
+}
+
+/*error-messages*/
+.error-message {
+  position: fixed;
+  width: 50px;
+  font-size: 8px;
+  background-color: red;
+  border: 1px solid #ccc;
+  padding: 5px 2.5px;
+  border-radius: 2px;
+  z-index: 5;
+  color: white;
+  display: none;
+  transform: translateY(-50%) translateX(60%);
+}
+
+#error3 {
+  transform: translateY(-75%) translateX(10%);
+}
+
+.error-message-toggle {
+  display: block;
+}
+
+/*final inforation displaying blocks*/
+.variables {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+  gap: 20px;
+}
+
+.variables p {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.variables span {
+  display: inline-block;
+  font-weight: 600;
+}
